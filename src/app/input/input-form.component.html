@@ -1,0 +1,7 @@
+<form (ngSubmit)="getData(country)">
+  <input name = 'country' [(ngModel)] = 'country'>
+  <button type="submit">Show/Hide</button>
+  <div *ngIf="submitted">
+  	<app-result-display [resultData]="resultData" [cache] = "cache"></app-result-display>
+  </div>
+</form>
